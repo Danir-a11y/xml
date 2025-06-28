@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page xmlns="http://n2oapp.net/framework/config/schema/page-4.0"
+      name="Delivery service">
+    <regions>
+        <scrollspy
+                id="r1"
+                title="Меню"
+                headlines="true"
+                placement="left"
+                max-height="500">
+            <group title="Information">
+                <menu-item id="mi1" title="Your personal data">
+                    <form>
+                        <fields>
+                            <row>
+                                <input-text id="firstname" label="Your Name"/>
+                                <input-text id="lastname" label="Your Surname"/>
+                            </row>
+                            <row>
+                                <select id="gender" label="Gender">
+                                    <options>
+                                        <option id="gender_1" name="male"/>
+                                        <option id="gender_2" name="female"/>
+                                    </options>
+                                </select>
+                                <date-time id="birthday" label="Date of birth"/>
+                            </row>
+                        </fields>
+                    </form>
+                </menu-item>
+                <menu-item id="mi5" title="Second person's personal data">
+                    <form>
+                        <fields>
+                            <row>
+                                <input-text id="firstname" label="Second person's Name"/>
+                                <input-text id="lastname" label="Second person's Surname"/>
+                            </row>
+                            <row>
+                                <select id="gender" label="Second person's Gender">
+                                    <options>
+                                        <option id="gender_1" name="male"/>
+                                        <option id="gender_2" name="female"/>
+                                    </options>
+                                </select>
+                                <date-time id="birthday" label="Second person's Date of birth"/>
+                            </row>
+                        </fields>
+                    </form>
+                </menu-item>
+
+                <menu-item id="mi2" title="Your Documents">
+                    <form>
+                        <fields>
+                            <radio-group id="documentType" label="Your type of a document"
+                                         description="If you choose a passport, please enter the number">
+                                <options>
+                                    <option id="doc_1" name="Passport"/>
+                                    <option id="doc_2" name="ID"/>
+                                    <option id="doc_3" name="Passport of a foreign citizen"/>
+                                    <option id="doc_4" name="Undefined"/>
+                                </options>
+                            </radio-group>
+                            <input-text id="documentNumber"
+                                        label="Number"/>
+                        </fields>
+                    </form>
+                </menu-item>
+
+                <menu-item id="mi6" title="Second person's Documents">
+                    <form>
+                        <fields>
+                            <radio-group id="documentType" label="Second person's type of a document"
+                                         description="If you choose a passport, please enter the number">
+                                <options>
+                                    <option id="doc_1" name="Passport"/>
+                                    <option id="doc_2" name="ID"/>
+                                    <option id="doc_3" name="Passport of a foreign citizen"/>
+                                    <option id="doc_4" name="Undefined"/>
+                                </options>
+                            </radio-group>
+                            <input-text id="documentNumber"
+                                        label="Number"/>
+                        </fields>
+                    </form>
+                </menu-item>
+            </group>
+
+
+            <group title="Order">
+                <menu-item id="mi3" title="Delivery details">
+                    <form>
+                        <fields>
+                            <select id="deliveryProcedure" label="Delivery procedure">
+                                <options>
+                                    <option id="proc_1" name="You -> Customer"/>
+                                    <option id="proc_2" name="Sender -> You"/>
+                                </options>
+                            </select>
+                            <select id="deliveryMethod" label="Delivery Method">
+                                <options>
+                                    <option id="method_1" name="Courier"/>
+                                    <option id="method_2" name="Post Office"/>
+                                </options>
+                            </select>
+                        </fields>
+                    </form>
+                </menu-item>
+
+                <menu-item id="mi4" title="End of delivery processing">
+                    <form>
+                        <fields>
+                            <input-text id="yourAddressCourier" label="Your address" />
+                            <input-text id="customerAddressCourier" label="Second person" />
+
+                            <input-text id="postOfficeYou" label="Address of the post office nearest to you" />
+                            <input-text id="postOfficeCustomer" label="Address of the post office nearest to Second person" />
+
+                        </fields>
+                    </form>
+                </menu-item>
+            </group>
+        </scrollspy>
+    </regions>
+</page>
